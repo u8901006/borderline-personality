@@ -1,0 +1,9 @@
+{
+  "name": "bpd-daily-report",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "undici": "^7.8.0"
+  }
+}

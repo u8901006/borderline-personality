@@ -2,8 +2,8 @@ import { readFile, writeFile, mkdir } from "node:fs/promises";
 import { dirname } from "node:path";
 import { setTimeout as sleep } from "node:timers/promises";
 
-const API_BASE = process.env.ZHIPU_API_BASE || "https://open.bigmodel.cn/api/coding/paas/v4";
-const FALLBACK_MODELS = ["GLM-5-Turbo", "GLM-4.7", "GLM-4.7-Flash"];
+const API_BASE = process.env.NVIDIA_API_BASE || "https://integrate.api.nvidia.com/v1";
+const FALLBACK_MODELS = ["nvidia/nemotron-3-super-120b-a12b", "nvidia/nemotron-3-nano-30b-a3b"];
 
 const SYSTEM_PROMPT = `你是邊緣型人格障礙（Borderline Personality Disorder, BPD）領域的資深研究員與科學傳播者。你的任務是：
 1. 從提供的醫學文獻中，篩選出最具臨床意義與研究價值的論文
@@ -81,7 +81,7 @@ function safeParseJSON(text) {
   }
 }
 
-async function callZhipuAPI(apiKey, payload) {
+async function callNvidiaAPI(apiKey, payload) {
   const { request } = await import("undici");
   const resp = await request(`${API_BASE}/chat/completions`, {
     method: "POST",
@@ -174,12 +174,14 @@ ${papersText}
             { role: "system", content: SYSTEM_PROMPT },
             { role: "user", content: prompt },
           ],
-          temperature: 0.3,
-          top_p: 0.9,
-          max_tokens: 50000,
+          temperature: 1.0,
+          top_p: 0.95,
+          max_tokens: 16384,
+          stream: false,
+          chat_template_kwargs: { enable_thinking: false },
         };
 
-        const data = await callZhipuAPI(apiKey, payload);
+        const data = await callNvidiaAPI(apiKey, payload);
         const text = data.choices?.[0]?.message?.content || "";
         if (!text) throw new Error("Empty response from API");
 
@@ -223,7 +225,7 @@ function generateHTML(analysis) {
   const keywords = analysis.keywords || [];
   const topicDist = analysis.topic_distribution || {};
   const totalCount = topPicks.length + allPapers.length;
-  const usedModel = process.env.ZHIPU_MODEL || "GLM-5-Turbo";
+  const usedModel = process.env.NVIDIA_MODEL || FALLBACK_MODELS[0];
 
   let topPicksHTML = "";
   for (const pick of topPicks) {
@@ -397,7 +399,7 @@ function generateHTML(analysis) {
       <div class="header-meta">
         <span class="badge badge-date">📅 ${dateDisplay}</span>
         <span class="badge badge-count">📊 ${totalCount} 篇文獻</span>
-        <span class="badge badge-source">Powered by PubMed + Zhipu AI</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA AI</span>
       </div>
     </div>
   </header>
@@ -453,9 +455,9 @@ function generateHTML(analysis) {
 
 async function main() {
   const opts = parseArgs();
-  const apiKey = process.env.ZHIPU_API_KEY || "";
+  const apiKey = process.env.NVIDIA_API_KEY || "";
   if (!apiKey) {
-    console.error("[ERROR] ZHIPU_API_KEY env var not set");
+    console.error("[ERROR] NVIDIA_API_KEY env var not set");
     process.exit(1);
   }
 

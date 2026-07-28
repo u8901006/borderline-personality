@@ -5,7 +5,7 @@
 ## 架構
 
 - **資料來源**：PubMed E-utilities、Semantic Scholar API、OpenAlex API
-- **AI 分析**：Zhipu GLM-5-Turbo（fallback: GLM-4.7 → GLM-4.7-Flash）
+- **AI 分析**：NVIDIA Nemotron 3 Super（fallback: Nemotron 3 Nano）
 - **部署**：GitHub Pages
 - **排程**：每日 21:00（台北時間）自動執行
 
@@ -14,7 +14,7 @@
 ```bash
 cd scripts && npm install
 node scripts/fetch-papers.mjs --days 7 --max-papers 40 --output papers.json
-ZHIPU_API_KEY=xxx node scripts/generate-report.mjs --input papers.json --output docs/bpd-test.html
+NVIDIA_API_KEY=your-key node scripts/generate-report.mjs --input papers.json --output docs/bpd-test.html
 ```
 
 ## 授權

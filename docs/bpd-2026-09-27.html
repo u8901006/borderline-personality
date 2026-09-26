@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>BPD Research Daily &middot; 邊緣型人格障礙研究文獻日報 &middot; 2026年9月27日</title>
+<meta name="description" content="2026年9月27日 邊緣型人格障礙研究文獻日報，由 AI 自動彙整最新論文"/>
+<style>
+  :root { --bg: #f6f1e8; --surface: #fffaf2; --line: #d8c5ab; --text: #2b2118; --muted: #766453; --accent: #8c4f2b; --accent-soft: #ead2bf; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: radial-gradient(circle at top, #fff6ea 0, var(--bg) 55%, #ead8c6 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 48px; height: 48px; border-radius: 14px; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(140,79,43,0.25); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(140,79,43,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: rgba(255,250,242,0.92); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(61,36,15,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: rgba(255,250,242,0.92); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(61,36,15,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: var(--accent); color: #fff7f0; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #5a7a3a; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,122,58,0.1); border-radius: 4px; }
+  .utility-mid { color: #9f7a2e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(159,122,46,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(118,100,83,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(255,253,249,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #fff7f0; background: var(--accent); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(140,79,43,0.18); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 120px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #c47a4a); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .links-banner { margin-top: 48px; animation: fadeUp 0.5s ease 0.3s both; }
+  .link-card { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: rgba(255,250,242,0.92); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(61,36,15,0.04); margin-bottom: 10px; }
+  .link-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .link-icon { font-size: 28px; flex-shrink: 0; }
+  .link-info { flex: 1; }
+  .link-name { font-size: 15px; font-weight: 700; color: var(--text); }
+  .link-desc { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .link-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; flex-wrap: wrap; gap: 8px; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 80px; font-size: 11px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>BPD Research Daily &middot; 邊緣型人格障礙研究文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年9月27日</span>
+        <span class="badge badge-count">📊 36 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA AI</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">今日文獻聚焦於BPD的神經生物機制（邊緣化杏仁核側化、前額葉-島葉結構與連結改變）、創傷與自傷行為的早期識別與求助模式，以及數位與藥物介入的探索（AI對話代理、低劑量氯氮平、rTMS），顯示從基礎神經科學到臨床實務的多層次整合趨勢。</p>
+  </div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">⭐</span>今日精選 TOP Picks</div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#1</span>
+            <span class="emoji-icon">🧠</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>Task-Based fMRI Reveals a Diagnosis-Dependent Amygdala Lateralization in Major Depressive Disorder, Borderline Personality Disorder, and Comorbidities.</h3>
+          <p class="journal-source">Neuroscience bulletin &middot; Task-Based fMRI Reveals a Diagnosis-Dependent Amygdala Lateralization in Major Depressive Disorder, Borderline Personality Disorder, and Comorbidities.</p>
+          <p>發現BPD患者顯示右側杏仁核過度活化，而MDD-BPD併存則呈雙側活化，提供神經生物學依據以區分BPD與MDD的病理機制，具重要鑑別診斷與治療定位價值。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">217名參與者，包括BPD seule、MDD seule、MDD-BPD併存及對照組</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">情緒臉匹配任務中的任務功能fMRI</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">BPD seule vs MDD seule vs MDD-BPD vs 健康對照組</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">BPD seule顯示右側杏仁核過度活化，MDD-BPD併存組呈雙側杏仁核活化，情緒不穩與負自我概念為關鍵介因數</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">神經影像學</span><span class="tag">情緒調節</span><span class="tag">共病</span><span class="tag">鑑別診斷</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42771073/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#2</span>
+            <span class="emoji-icon">🧠</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>Analysis of brain volumetry and functional connectivity during resting state in patients with borderline personality disorder.</h3>
+          <p class="journal-source">European archives of psychiatry and clinical neuroscience &middot; Analysis of brain volumetry and functional connectivity during resting state in patients with borderline personality disorder.</p>
+          <p>發現BPD患者雙側島葉與前額葉迴灰質減少，且前額葉連結異常與童年虐待、症狀嚴重度及自傷行為相關，揭示結構-功能變化的發展模式。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">48名女性BPD患者（VBM）及41名（rs-fMRI），對照組54及51名健康女性</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">結合 voxel-based morphometry (VBM) 與 resting-state fMRI</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">BPD患者 vs 健康對照組</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">島葉與中/上額frontal gyrus灰質減少；右中/上額frontal gyrus與額葉葉、顳葉、額極區連結增加；症狀嚴重度與自傷行為預測特定連結改變</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">神經影像學</span><span class="tag">創傷與複雜性PTSD</span><span class="tag">自傷/自殺</span><span class="tag">情緒調節</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42762241/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#3</span>
+            <span class="emoji-icon">🤝</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>Help-seeking patterns for non-suicidal self-injury across borderline symptom profiles in a large sample of university students.</h3>
+          <p class="journal-source">Borderline personality disorder and emotion dysregulation &middot; Help-seeking patterns for non-suicidal self-injury across borderline symptom profiles in a large sample of university students.</p>
+          <p>在1,476名瑞典大學生中發現，非自殺性自傷行為的求助行為隨BPD症狀類型無顯著差異，但他人鼓勵是求助行為最一致的預測因子，提示社會支持在早期干預中的關鍵作用。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">1,476名瑞典大學生（68.5%女性），經McLean篩選工具分類為四種BPD症狀 profiles</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">無（橫斷面觀察）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">Full Spectrum、Internalizing、Externalizing、Asymptomatic 四種症狀類型間的求助行為差異</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">求助行為在四個類型間無顯著差異；他人鼓勵是求助行為最一致相關因子；態度與來源無顯著差異</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">自傷/自殺</span><span class="tag">兒少BPD</span><span class="tag">家庭與照顧者</span><span class="tag">污名化與服務</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42791559/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#4</span>
+            <span class="emoji-icon">💊</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>Low-Dose Clozapine Versus Aripiprazole in Borderline Personality Disorder: A Prospective Naturalistic Study.</h3>
+          <p class="journal-source">Journal of clinical psychopharmacology &middot; Low-Dose Clozapine Versus Aripiprazole in Borderline Personality Disorder: A Prospective Naturalistic Study.</p>
+          <p>低劑量氯氮平在解離與抑鬱症狀上較阿利匹胺優勢顯著，兩藥皆安全耐受，支持氯氮平作為重度、治療抵抗BPD患者的補充藥物選項。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">23名嚴重BPD患者（低劑量氯氮平n=9，阿利匹胺n=14）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">低劑量氯氮平 vs 阿利匹胺</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">兩藥物組於入院、出院及3個月隨訪時的情緒失調、解離、抑鬱、衝動與生活品質變化</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">兩組皆改善；氯氮平在出院時顯著降低解離，隨訪時降低抑鬱優於阿利匹胺；兩藥皆安全耐受</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">藥物治療</span><span class="tag">情緒調節</span><span class="tag">自傷/自殺</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42757991/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#5</span>
+            <span class="emoji-icon">🤖</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>Possible Role and Function of AI Conversational Agents in Dialectical Behavior Therapy for Borderline Personality Disorder: Qualitative Interview Study.</h3>
+          <p class="journal-source">JMIR mental health &middot; Possible Role and Function of AI Conversational Agents in Dialectical Behavior Therapy for Borderline Personality Disorder: Qualitative Interview Study.</p>
+          <p>DBT臨床師視角下，AI對話代理被視為「苦行助手」— 可提供全天候支援，但懸念其可能強化依賴與安全行為，而非促進自主性，凸顯技術整合的倫理與臨床張力。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">17名瑞典DBT心理師（平均臨床經驗6.4年）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">半結構式訪談探索AI對話代理在DBT中的潛在角色</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">無（質性研究）</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">三大主題：(1)『我們在治療中是誰？』（AI定位為工具/團隊成員/主管/競爭者），(2)『苦行助手』（AI為理想助手的擴展），(3)『善意的適應者』（AI可能強化依賴與尋求安慰而非自主）</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">數位心理健康</span><span class="tag">DBT</span><span class="tag">情緒調節</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42789542/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div></div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">📚</span>其他值得關注的文獻</div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">📊</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>Examining Change Using the MMPI-2-RF in a Multicenter RCT on BPD: Data from the BOOTS Project.</h3>
+          <p class="journal-source">Journal of personality assessment</p>
+          <p>在多中心RCT中，MMPI-2-RF顯示BPD患者在內化 scale 上有中等至大的變化效應，支持其作為追蹤心理治療變化的工具。</p>
+          <div class="card-footer">
+            <span class="tag">鑑別診斷</span><span class="tag">DBT</span><span class="tag">情緒調節</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42789793/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">📋</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>Exploring Associations Between the MMPI-3 and Measures of Borderline Personality Disorder, Posttraumatic Stress Disorder, and Dissociation in a Sample of Incarcerated Women.</h3>
+          <p class="journal-source">Journal of personality assessment</p>
+          <p>在監禁女性中，MMPI-3的EID、RC7、RC8等尺度與BPD、PTSD、解離症狀顯著相關，支持其在複雜創傷人群中的鑑別診斷實用性。</p>
+          <div class="card-footer">
+            <span class="tag">創傷與複雜性PTSD</span><span class="tag">鑑別診斷</span><span class="tag">情緒調節</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42789787/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🌏</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>Borderline Personality Disorder in South Korea: A Narrative Review of Clinical Research and Future Directions.</h3>
+          <p class="journal-source">Yonsei medical journal</p>
+          <p>南韓BPD顯著漏診，發病年齡較晚，功能受損與自殺風險高，強調需降低污名、提早干預並推廣證據基礎治療。</p>
+          <div class="card-footer">
+            <span class="tag">污名化與服務</span><span class="tag">兒少BPD</span><span class="tag">共病</span><span class="tag">自傷/自殺</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42773489/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧲</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>Right DLPFC repetitive transcranial magnetic stimulation in women with borderline personality disorder: A double-blind randomized sham-controlled trial.</h3>
+          <p class="journal-source">Journal of affective disorders</p>
+          <p>右側DLPFC rTMS在BPD患者中未顯著優於假刺激，僅見短期自我報告抑鬱改善，提示需更大樣本與優化靶點以確認真實療效。</p>
+          <div class="card-footer">
+            <span class="tag">神經影像學</span><span class="tag">藥物治療</span><span class="tag">情緒調節</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42697251/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">💧</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>Dissociation as a marker of emotion dysregulation: An examination in adolescent psychiatric inpatients using ecological momentary assessment.</h3>
+          <p class="journal-source">Journal of affective disorders</p>
+          <p>在青少年住院患者中，解離與負負情緒同步發生，但無預測性關聯；皮質醇與解離交互作用預測後續負情緒下降，部分支持解離作為短期調節機制。</p>
+          <div class="card-footer">
+            <span class="tag">情緒調節</span><span class="tag">兒少BPD</span><span class="tag">創傷與複雜性PTSD</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42637146/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">❓</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>Suicidal ideation covaries with depressive severity during six-month real-world esketamine treatment in a cohort enriched for borderline personality disorder.</h3>
+          <p class="journal-source">Journal of affective disorders</p>
+          <p>未提供摘要，無法評估。</p>
+          <div class="card-footer">
+            <span class="tag">自傷/自殺</span><span class="tag">藥物治療</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42624219/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">⚡</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>Does impulsivity predict treatment outcomes in PTSD with borderline personality disorder features? Results from a randomized clinical trial.</h3>
+          <p class="journal-source">Journal of psychiatric research</p>
+          <p>基礎衝動性預測較高輟與CPT組PTSD改善較差，但DBT-PTSD組無關聯，提示DBT可能緩衝衝動性對治療的負面影響。</p>
+          <div class="card-footer">
+            <span class="tag">DBT</span><span class="tag">創傷與複雜性PTSD</span><span class="tag">情緒調節</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42617371/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧠</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>Localizing the structural and functional alteration networks associated with borderline personality disorder.</h3>
+          <p class="journal-source">Journal of affective disorders</p>
+          <p>透過96篇文獻整合，定位BPD相關的三大腦網絡：結構（運動/皮質）、功能 salient 檢測（島殼/粒狀核）、靜止態預設模式網，並連結特定神經遞質系統。</p>
+          <div class="card-footer">
+            <span class="tag">神經影像學</span><span class="tag">情緒調節</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42600786/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">💬</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>Distress Intolerance: Dialectical Behavior Therapy Informed Communication for Serious Illness Care.</h3>
+          <p class="journal-source">Journal of palliative medicine</p>
+          <p>DBT的痛苦 intolerance 技能與驗證策略可幫助嚴重疾病患者及其醫療團隊管理痛苦，提升照護品質與減少次級創傷。</p>
+          <div class="card-footer">
+            <span class="tag">DBT</span><span class="tag">情緒調節</span><span class="tag">共病</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42596557/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">📉</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>Clinical and psychological characteristics of adolescents at risk of mood disorders compared with adolescents with suicidal behavior.</h3>
+          <p class="journal-source">Journal of affective disorders</p>
+          <p>有自殺行為的青少年顯著較高絕望感、焦慮與BPD特徵，而情緒風險群則顯著較低憂鬱與焦慮，支持早期識別BPD特徵於自殺預防的重要性。</p>
+          <div class="card-footer">
+            <span class="tag">兒少BPD</span><span class="tag">自傷/自殺</span><span class="tag">情緒調節</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42585935/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">👶</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>Mechanisms of vulnerability in borderline personality psychopathology: The role of childhood maltreatment, social cognition, and emotion dysregulation.</h3>
+          <p class="journal-source">Journal of affective disorders</p>
+          <p>童年虐待嚴重度與社會認知缺損（特別是情緒識別與理論心智）共同預測BPD不良結果，即使未診斷BPD亦見此關聯，強調早期干預的預防價值。</p>
+          <div class="card-footer">
+            <span class="tag">創傷與複雜性PTSD</span><span class="tag">情緒調節</span><span class="tag">社會學與公共衛生</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42575194/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🌀</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>Impulsivity in borderline personality disorder: A scoping review of affective, neurobiological and methodological findings.</h3>
+          <p class="journal-source">Psychiatry research</p>
+          <p>BPD衝動性主要受負緊急性（negative urgency）影響，並在情緒唤起下顯現，而非靜態抑制控制缺陷，支持情境化、情緒導向的治療模型。</p>
+          <div class="card-footer">
+            <span class="tag">情緒調節</span><span class="tag">自傷/自殺</span><span class="tag">神經影像學</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42537325/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">⚖️</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>Trauma, Diagnosis, and Borderline Personality Disorder: The Need for Conceptual Clarity.</h3>
+          <p class="journal-source">Social work</p>
+          <p>雖然童年創傷是BPD的重要風險因子，但非必要也不充分，警告避免將cPTSD視為BPD的亞型，強調需多因素模型與謹慎鑑別，以避免誤診與污名。</p>
+          <div class="card-footer">
+            <span class="tag">創傷與複雜性PTSD</span><span class="tag">鑑別診斷</span><span class="tag">污名化與服務</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42520309/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🤖</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>Contextual insights from large language models in ambulatory assessment: Differential reactivity of affect and self-esteem to daily events in borderline personality disorder.</h3>
+          <p class="journal-source">Journal of psychopathology and clinical science</p>
+          <p>利用LLM分析自由文本發現，BPD個體在社交/個人關係與健康相關事件中自我評價與寧靜度反應顯著較低，且對負面事件的情緒反應性增強，顯示其對社會線索的過度敏感。</p>
+          <div class="card-footer">
+            <span class="tag">數位心理健康</span><span class="tag">情緒調節</span><span class="tag">自傷/自殺</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42507383/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🚫</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>The salient role of childhood neglect in single and multiple suicide attempts among adult psychiatric inpatients.</h3>
+          <p class="journal-source">European journal of psychotraumatology</p>
+          <p>情緒忽視是最常見童年創傷類型（93%），且與多次自殺試圖顯著相關，當與其他虐待共存時影響加倍，強調需全面創傷評估而非單一因子聚焦。</p>
+          <div class="card-footer">
+            <span class="tag">創傷與複雜性PTSD</span><span class="tag">自傷/自殺</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42474732/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">💔</span>
+            <span class="utility-high utility-sm">高</span>
+          </div>
+          <h3>Suicidal attempts in young adults with borderline personality disorder: Examing factors in pathways to attempts.</h3>
+          <p class="journal-source">Journal of affective disorders</p>
+          <p>情緒失調與衝動性是預測青年BPD患者自殺意圖與行為的關鍵，且18%嘗試自殺者無前期意圖或計畫，提示需評估非線性、衝動驅動的自殺風險。</p>
+          <div class="card-footer">
+            <span class="tag">自傷/自殺</span><span class="tag">情緒調節</span><span class="tag">兒少BPD</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42448054/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧩</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>From Childhood Emotional Abuse to Adolescent Dissociation: The Role of Borderline Personality Features.</h3>
+          <p class="journal-source">Journal of trauma &amp; dissociation : the official journal of the International Society for the Study of Dissociation (ISSD)</p>
+          <p>童年情感虐待透過BPD特徵（特別是情緒不穩與身份問題）中介導致青少年解離，說明青春期是介入的關鍵窗口。</p>
+          <div class="card-footer">
+            <span class="tag">創傷與複雜性PTSD</span><span class="tag">情緒調節</span><span class="tag">兒少BPD</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42438925/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🌀</span>
+            <span class="utility-high utility-sm">高</span>
+          </div>
+          <h3>Absorption and Depersonalisation Derealisation Link Childhood Trauma to BPD Severity and Show Strong Independent Predictive Effects for Various BPD Symptom Domains.</h3>
+          <p class="journal-source">Journal of trauma &amp; dissociation : the official journal of the International Society for the Study of Dissociation (ISSD)</p>
+          <p>吸收型解離預測BPD九個領域中的八個（除自殺外），而去人格isation現實感解離則獨特預測自殺行為，支持區分解離亞型以指導臨床評估與治療。</p>
+          <div class="card-footer">
+            <span class="tag">創傷與複雜性PTSD</span><span class="tag">自傷/自殺</span><span class="tag">情緒調節</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42423237/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">👥</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>Personality Traits in Borderline Personality Disorder: A Cluster Analysis Based on the Millon Test Scores.</h3>
+          <p class="journal-source">Journal of clinical psychology</p>
+          <p>透過Million叢 cluster 分析識別出三種BPD特質模式：外向型（邊緣/衝動/ narcissistic）、內向型（依賴/迴避）及減弱型（低所有特徵），後者較多藥物治療，支持個性化治療。</p>
+          <div class="card-footer">
+            <span class="tag">共病</span><span class="tag">鑑別診斷</span><span class="tag">情緒調節</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42400289/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧠</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>Exploring Reasoning Biases Associated With Psychosis in Borderline Personality Disorder Using Self-Report and Objective Measures.</h3>
+          <p class="journal-source">Journal of clinical psychology</p>
+          <p>BPD群體在證據迴避偏見（BADE）上較健康對照明顯高，但低於精神分裂症；在跳躍結論（JTC）任務中65%呈陽性，提示其在精神病樣症狀中的認知脆弱性。</p>
+          <div class="card-footer">
+            <span class="tag">共病</span><span class="tag">鑑別診斷</span><span class="tag">情緒調節</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42398047/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🤗</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>Promoting self-compassion meditation with intranasal oxytocin in borderline personality disorder: a pilot study.</h3>
+          <p class="journal-source">Psychiatry research</p>
+          <p>內源性催產素增強BPD患者在慈悲冥想中的想像維度表現，但未影響總分或身體體驗，提示其可能僅調節主觀體驗的特定面向。</p>
+          <div class="card-footer">
+            <span class="tag">藥物治療</span><span class="tag">DBT</span><span class="tag">情緒調節</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42372695/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">⏳</span>
+            <span class="utility-high utility-sm">高</span>
+          </div>
+          <h3>Time to diagnosis and treatment for borderline personality disorder - opportunities and pitfalls during the consumer mental health journey.</h3>
+          <p class="journal-source">Journal of psychiatric research</p>
+          <p>BPD症狀起始至診斷中位數延遲達13.5年，男性更長，診斷後至治療仍超過一年，凸顯系統性延遲與需改善溝通與服務連結的急迫性。</p>
+          <div class="card-footer">
+            <span class="tag">污名化與服務</span><span class="tag">鑑別診斷</span><span class="tag">共病</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42341412/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">💊</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>Intranasal esketamine in treatment-resistant depression with and without comorbid borderline personality disorder: A multicenter real-world longitudinal study.</h3>
+          <p class="journal-source">Psychiatry research</p>
+          <p>伴BPD的治療抵抗憂鬱患者對鼻腔艾斯كس胺反應較好（月內起效），但六月緩解率無差異，提示BPD可能影響早期反應而非長期復原。</p>
+          <div class="card-footer">
+            <span class="tag">藥物治療</span><span class="tag">共病</span><span class="tag">情緒調節</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42322927/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">⚰️</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>Risk factors associated with death by suicide in people diagnosed with borderline personality disorder in comparison with major depressive disorder: A descriptive study.</h3>
+          <p class="journal-source">Journal of psychiatric research</p>
+          <p>BPD自殺死亡者較常見童年逆境、自傷史、近期關係斷裂與自傷方式改變；MDD則以生活事件與物質使用惡化為主，支持構建BPD特定自殺風險評估模型。</p>
+          <div class="card-footer">
+            <span class="tag">自傷/自殺</span><span class="tag">共病</span><span class="tag">創傷與複雜性PTSD</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42284804/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🔥</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>Peripheral inflammation is associated with emotional dysregulation, suicide attempts, and reduced microstructural integrity of white matter in young adults with borderline personality disorder.</h3>
+          <p class="journal-source">Brain, behavior, and immunity</p>
+          <p>BPD年輕成人外周發炎（尤其GM-CSF）與情緒失調、自殺企圖及白質微結構損傷（ salient 網絡）相關，支持免疫-神經雙重病理模型。</p>
+          <div class="card-footer">
+            <span class="tag">創傷與複雜性PTSD</span><span class="tag">自傷/自殺</span><span class="tag">神經影像學</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42229704/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">📈</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>Borderline personality features predicting depressive symptom trajectories among Chinese university students: The mediating role of difficulties in emotion regulation.</h3>
+          <p class="journal-source">Journal of affective disorders</p>
+          <p>在中國大學生中，BPD特徵透過情緒調節困難中介預測遞增型憂鬱軌跡，男性與年長為高風險因子，支持早期情緒技能訓練作為預防策略。</p>
+          <div class="card-footer">
+            <span class="tag">情緒調節</span><span class="tag">兒少BPD</span><span class="tag">共病</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42144142/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🛡️</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>Long-term stability of perceived childhood trauma in individuals with borderline personality disorder.</h3>
+          <p class="journal-source">European journal of psychotraumatology</p>
+          <p>童年創傷問卷（CTQ）在BPD個體中顯示高度長期穩定性（ICC=0.82，4–11年），其變化與BPD症狀嚴重度同步變化，支持其作為可靠的回顧評估工具。</p>
+          <div class="card-footer">
+            <span class="tag">創傷與複雜性PTSD</span><span class="tag">鑑別診斷</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42018457/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">💔</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>Long-term consequences of childhood sexual abuse: An umbrella review of diagnostic meta-analyses.</h3>
+          <p class="journal-source">L'Encephale</p>
+          <p>童年性侵害顯著增加BPD風險（OR=5.96），與睡眠 disorder 並列為最常見精神後果，強調需納入創傷史評估於精神病檢查。</p>
+          <div class="card-footer">
+            <span class="tag">創傷與複雜性PTSD</span><span class="tag">共病</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/41963175/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">👥</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>Prevalence, psychiatric comorbidity and treatment of multiple personality disorder in Germany: an analysis based on nationwide claims data, 2012-2021.</h3>
+          <p class="journal-source">European journal of psychotraumatology</p>
+          <p>德國多重人格障礙（MPD）診斷率上升但仍低於流行病學估計，顯著共病焦慮與憂鬱，提示臨床上可能被漏診或誤診。</p>
+          <div class="card-footer">
+            <span class="tag">共病</span><span class="tag">污名化與服務</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/41873547/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🎁</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>Linking childhood adversity with borderline and depressive symptoms: the role of reward processing.</h3>
+          <p class="journal-source">European journal of psychotraumatology</p>
+          <p>童年逆境透過獎賞反應與學習維度影響BPD症狀，僅透過獎賞學習影響憂鬱，支持獎賞處理作為跨診斷治療標的。</p>
+          <div class="card-footer">
+            <span class="tag">創傷與複雜性PTSD</span><span class="tag">情緒調節</span><span class="tag">共病</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/41791027/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">👩‍👧</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>The Role of Mothers' Psychiatric Symptoms, Practices of Emotion Socialization and Emotion Regulation among Children Diagnosed with Attention Deficit and Hyperactivity Disorder.</h3>
+          <p class="journal-source">Child psychiatry and human development</p>
+          <p>母親的ADHD與BPD症狀透過其不支援的情緒社會化方式（懲罰與苦惱反應）間接影響孩子ADHD症狀的嚴重度，提示父母心理健康對孩子行為的間接影響。</p>
+          <div class="card-footer">
+            <span class="tag">兒少BPD</span><span class="tag">家庭與照顧者</span><span class="tag">情緒調節</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/40120040/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div></div>
+
+  <div class="topic-section section"><div class="section-title"><span class="section-icon">📊</span>主題分佈</div>
+            <div class="topic-row">
+              <span class="topic-name">DBT</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:26%"></div></div>
+              <span class="topic-count">6</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">情緒調節</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">23</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">自傷/自殺</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:70%"></div></div>
+              <span class="topic-count">16</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">創傷與複雜性PTSD</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:83%"></div></div>
+              <span class="topic-count">19</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">神經影像學</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:43%"></div></div>
+              <span class="topic-count">10</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">藥物治療</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:52%"></div></div>
+              <span class="topic-count">12</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">鑑別診斷</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:61%"></div></div>
+              <span class="topic-count">14</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">兒少BPD</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:48%"></div></div>
+              <span class="topic-count">11</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">污名化與服務</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:39%"></div></div>
+              <span class="topic-count">9</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">共病</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:74%"></div></div>
+              <span class="topic-count">17</span>
+            </div></div>
+
+  <div class="keywords-section section"><div class="section-title"><span class="section-icon">🏷️</span>關鍵字</div><div class="keywords"><span class="keyword">BPD</span><span class="keyword">情緒調節</span><span class="keyword">自傷/自殺</span><span class="keyword">神經影像學</span><span class="keyword">藥物治療</span><span class="keyword">DBT</span><span class="keyword">創傷與複雜性PTSD</span><span class="keyword">兒少BPD</span><span class="keyword">污名化與服務</span><span class="keyword">鑑別診斷</span></div></div>
+
+  <div class="links-banner">
+    <a href="https://www.leepsyclinic.com/" class="link-card" target="_blank">
+      <span class="link-icon">🏥</span>
+      <span class="link-info">
+        <span class="link-name">李政洋身心診所首頁</span>
+        <span class="link-desc">專業身心科醫療服務</span>
+      </span>
+      <span class="link-arrow">&rarr;</span>
+    </a>
+    <a href="https://blog.leepsyclinic.com/" class="link-card" target="_blank">
+      <span class="link-icon">📬</span>
+      <span class="link-info">
+        <span class="link-name">訂閱電子報</span>
+        <span class="link-desc">定期接收最新身心醫學資訊</span>
+      </span>
+      <span class="link-arrow">&rarr;</span>
+    </a>
+    <a href="https://buymeacoffee.com/CYlee" class="link-card" target="_blank">
+      <span class="link-icon">☕</span>
+      <span class="link-info">
+        <span class="link-name">Buy Me a Coffee</span>
+        <span class="link-desc">支持本研究計畫持續運作</span>
+      </span>
+      <span class="link-arrow">&rarr;</span>
+    </a>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; Semantic Scholar &middot; OpenAlex &middot; 分析模型：nvidia/nemotron-3-super-120b-a12b</span>
+    <span><a href="https://github.com/u8901006/borderline-personality">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>

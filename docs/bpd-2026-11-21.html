@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>BPD Research Daily &middot; 邊緣型人格障礙研究文獻日報 &middot; 2026年11月21日</title>
+<meta name="description" content="2026年11月21日 邊緣型人格障礙研究文獻日報，由 AI 自動彙整最新論文"/>
+<style>
+  :root { --bg: #f6f1e8; --surface: #fffaf2; --line: #d8c5ab; --text: #2b2118; --muted: #766453; --accent: #8c4f2b; --accent-soft: #ead2bf; }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: radial-gradient(circle at top, #fff6ea 0, var(--bg) 55%, #ead8c6 100%); color: var(--text); font-family: "Noto Sans TC", "PingFang TC", "Helvetica Neue", Arial, sans-serif; min-height: 100vh; overflow-x: hidden; }
+  .container { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; padding: 60px 32px 80px; }
+  header { display: flex; align-items: center; gap: 16px; margin-bottom: 52px; animation: fadeDown 0.6s ease both; }
+  .logo { width: 48px; height: 48px; border-radius: 14px; background: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; box-shadow: 0 4px 20px rgba(140,79,43,0.25); }
+  .header-text h1 { font-size: 22px; font-weight: 700; color: var(--text); letter-spacing: -0.3px; }
+  .header-meta { display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap; align-items: center; }
+  .badge { display: inline-block; padding: 3px 10px; border-radius: 20px; font-size: 11px; letter-spacing: 0.3px; }
+  .badge-date { background: var(--accent-soft); border: 1px solid var(--line); color: var(--accent); }
+  .badge-count { background: rgba(140,79,43,0.06); border: 1px solid var(--line); color: var(--muted); }
+  .badge-source { background: transparent; color: var(--muted); font-size: 11px; padding: 0 4px; }
+  .summary-card { background: rgba(255,250,242,0.92); border: 1px solid var(--line); border-radius: 24px; padding: 28px 32px; margin-bottom: 32px; box-shadow: 0 20px 60px rgba(61,36,15,0.06); animation: fadeUp 0.5s ease 0.1s both; }
+  .summary-card h2 { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.6px; color: var(--accent); margin-bottom: 16px; }
+  .summary-text { font-size: 15px; line-height: 1.8; color: var(--text); }
+  .section { margin-bottom: 36px; animation: fadeUp 0.5s ease both; }
+  .section-title { display: flex; align-items: center; gap: 10px; font-size: 17px; font-weight: 700; color: var(--text); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+  .section-icon { width: 28px; height: 28px; border-radius: 8px; display: flex; align-items: center; justify-content: center; font-size: 14px; flex-shrink: 0; background: var(--accent-soft); }
+  .news-card { background: rgba(255,250,242,0.92); border: 1px solid var(--line); border-radius: 24px; padding: 22px 26px; margin-bottom: 12px; box-shadow: 0 8px 30px rgba(61,36,15,0.04); transition: background 0.2s, border-color 0.2s, transform 0.2s; }
+  .news-card:hover { transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .news-card.featured { border-left: 3px solid var(--accent); }
+  .news-card.featured:hover { border-color: var(--accent); }
+  .card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; }
+  .rank-badge { background: var(--accent); color: #fff7f0; font-weight: 700; font-size: 12px; padding: 2px 8px; border-radius: 6px; }
+  .emoji-icon { font-size: 18px; }
+  .card-header-row { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .emoji-sm { font-size: 14px; }
+  .news-card h3 { font-size: 15px; font-weight: 600; color: var(--text); margin-bottom: 8px; line-height: 1.5; }
+  .journal-source { font-size: 12px; color: var(--accent); margin-bottom: 8px; opacity: 0.8; }
+  .news-card p { font-size: 13.5px; line-height: 1.75; color: var(--muted); }
+  .card-footer { margin-top: 12px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  .tag { padding: 2px 9px; background: var(--accent-soft); border-radius: 999px; font-size: 11px; color: var(--accent); }
+  .news-card a { font-size: 12px; color: var(--accent); text-decoration: none; opacity: 0.7; margin-left: auto; }
+  .news-card a:hover { opacity: 1; }
+  .utility-high { color: #5a7a3a; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(90,122,58,0.1); border-radius: 4px; }
+  .utility-mid { color: #9f7a2e; font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(159,122,46,0.1); border-radius: 4px; }
+  .utility-low { color: var(--muted); font-size: 11px; font-weight: 600; padding: 2px 8px; background: rgba(118,100,83,0.08); border-radius: 4px; }
+  .utility-sm { font-size: 10px; }
+  .pico-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 12px; padding: 12px; background: rgba(255,253,249,0.8); border-radius: 14px; border: 1px solid var(--line); }
+  .pico-item { display: flex; gap: 8px; align-items: baseline; }
+  .pico-label { font-size: 10px; font-weight: 700; color: #fff7f0; background: var(--accent); padding: 2px 6px; border-radius: 4px; flex-shrink: 0; }
+  .pico-text { font-size: 12px; color: var(--muted); line-height: 1.4; }
+  .keywords-section { margin-bottom: 36px; }
+  .keywords { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+  .keyword { padding: 5px 14px; background: var(--accent-soft); border: 1px solid var(--line); border-radius: 20px; font-size: 12px; color: var(--accent); cursor: default; transition: background 0.2s; }
+  .keyword:hover { background: rgba(140,79,43,0.18); }
+  .topic-section { margin-bottom: 36px; }
+  .topic-row { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+  .topic-name { font-size: 13px; color: var(--muted); width: 120px; flex-shrink: 0; text-align: right; }
+  .topic-bar-bg { flex: 1; height: 8px; background: var(--line); border-radius: 4px; overflow: hidden; }
+  .topic-bar { height: 100%; background: linear-gradient(90deg, var(--accent), #c47a4a); border-radius: 4px; transition: width 0.6s ease; }
+  .topic-count { font-size: 12px; color: var(--accent); width: 24px; }
+  .links-banner { margin-top: 48px; animation: fadeUp 0.5s ease 0.3s both; }
+  .link-card { display: flex; align-items: center; gap: 14px; padding: 18px 24px; background: rgba(255,250,242,0.92); border: 1px solid var(--line); border-radius: 24px; text-decoration: none; color: var(--text); transition: all 0.2s; box-shadow: 0 8px 30px rgba(61,36,15,0.04); margin-bottom: 10px; }
+  .link-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 12px 40px rgba(61,36,15,0.08); }
+  .link-icon { font-size: 28px; flex-shrink: 0; }
+  .link-info { flex: 1; }
+  .link-name { font-size: 15px; font-weight: 700; color: var(--text); }
+  .link-desc { font-size: 12px; color: var(--muted); margin-top: 2px; }
+  .link-arrow { font-size: 18px; color: var(--accent); font-weight: 700; }
+  footer { margin-top: 32px; padding-top: 22px; border-top: 1px solid var(--line); font-size: 11.5px; color: var(--muted); display: flex; justify-content: space-between; animation: fadeUp 0.5s ease 0.5s both; flex-wrap: wrap; gap: 8px; }
+  footer a { color: var(--muted); text-decoration: none; }
+  footer a:hover { color: var(--accent); }
+  @keyframes fadeDown { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+  @keyframes fadeUp { from { opacity: 0; transform: translateY(16px); } to { opacity: 1; transform: translateY(0); } }
+  @media (max-width: 600px) { .container { padding: 36px 18px 60px; } .summary-card, .news-card { padding: 20px 18px; } .pico-grid { grid-template-columns: 1fr; } footer { flex-direction: column; gap: 6px; text-align: center; } .topic-name { width: 80px; font-size: 11px; } }
+</style>
+</head>
+<body>
+<div class="container">
+  <header>
+    <div class="logo">🧠</div>
+    <div class="header-text">
+      <h1>BPD Research Daily &middot; 邊緣型人格障礙研究文獻日報</h1>
+      <div class="header-meta">
+        <span class="badge badge-date">📅 2026年11月21日</span>
+        <span class="badge badge-count">📊 15 篇文獻</span>
+        <span class="badge badge-source">Powered by PubMed + NVIDIA AI</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="summary-card">
+    <h2>📋 今日文獻趨勢</h2>
+    <p class="summary-text">今日文獻呈現跨領域跨方法之趨勢：針對青少年 BPD 的單次睡眠介入顯現症據改善，以及情緒調節與人際介入（如Family Connections）有持續效益。遺傳學研究深入探討 BPD 非加性遺傳因素；而 oxytocin 與 BPD symptom 軌跡之關係則提供生物學視角。此外，睡眠、情緒調度與服務使用者經驗仍為臨床焦點。</p>
+  </div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">⭐</span>今日精選 TOP Picks</div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#1</span>
+            <span class="emoji-icon">😴</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>Improved sleep and clinical outcomes following a single-session intervention among adolescents with borderline personality disorder features.</h3>
+          <p class="journal-source">Journal of affective disorders &middot; Improved sleep and clinical outcomes following a single-session intervention among adolescents with borderline personality disorder features.</p>
+          <p>針對有 BPD 特徵的青少年進行單次睡眠介入，顯著改善睡眠數量與質量（主觀與客觀），多項 BPD 症狀亦有顯著改善，顯示睡眠為具潛力的早期干預目標。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">有 BPD 特徵且睡眠困擾的青少年（N=57）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">單次睡眠專注治療（Transdiagnostic Sleep and Circadian Intervention）</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">常規評估對照</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">睡眠指標改善；部分鑑別症狀亦改善維持一個月</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">睡眠</span><span class="tag">情緒調節</span><span class="tag">兒少BPD</span><span class="tag">DBT</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/43057533/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#2</span>
+            <span class="emoji-icon">⚠️</span>
+            <span class="utility-high">高實用性</span>
+          </div>
+          <h3>Association Between Suicidal Ideation and Depressive Symptoms in Patients With Major Depressive, Bipolar, and Borderline Personality Disorder: An Ecological Momentary Assessment Study.</h3>
+          <p class="journal-source">The Journal of clinical psychiatry &middot; Association Between Suicidal Ideation and Depressive Symptoms in Patients With Major Depressive, Bipolar, and Borderline Personality Disorder: An Ecological Momentary Assessment Study.</p>
+          <p>利用 EMA 實時捕捉，證明 BPD 群體中瞬間 suicidal ideation 與情緒症狀（如 anhedonia、fatigue、hopelessness）關聯最強，臨床上需關注這些瞬間波動以進行風險評估。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">目前憂鬱狀的 MDD、BD、BPD 患者</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">Ecological Momentary Assessment (EMA) 實時監測</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">三群體間比較</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">BPD 群瞬間 SI 關聯情緒症狀顯著強於 MDD，特別是 anhedonia、fatigue 與 hopelessness</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">自殺</span><span class="tag">情緒調節</span><span class="tag">EMA</span><span class="tag">共病</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/43055649/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#3</span>
+            <span class="emoji-icon">👨‍👩‍👧</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>Family Connections: An Examination of Intrapersonal and Social-Relational Outcomes.</h3>
+          <p class="journal-source">Family process &middot; Family Connections: An Examination of Intrapersonal and Social-Relational Outcomes.</p>
+          <p>同儕主導的 Psychoeducational 及技能訓練程式（Family Connections）顯著降低照顧者負擔、提升情緒調節與希望感，證明對家庭照顧者之 well-being 有實質效益，雖對症狀變化影響有限。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text"> Canadian 家庭照顧者（n=101）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">12週 Family Connections 同儕領導小組</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">治前對照</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">照顧者負擔、情緒調節、希望、功能性應對顯著改善；未顯著改變憂慮、焦慮、壓力</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">家庭與照顧者</span><span class="tag">情緒調節</span><span class="tag">DBT</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/43051947/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#4</span>
+            <span class="emoji-icon">🔬</span>
+            <span class="utility-low">低實用性</span>
+          </div>
+          <h3>Longitudinal associations between plasma oxytocin levels and borderline personality disorder symptoms in adolescents.</h3>
+          <p class="journal-source">Psychoneuroendocrinology &middot; Longitudinal associations between plasma oxytocin levels and borderline personality disorder symptoms in adolescents.</p>
+          <p>探討 BPD 青少年氧釋素水平與症狀軌跡之關係，發現 baseline 氧釋素水平顯著預測一年後 BPD 標準數，提示氧釋素可能作為未來症狀發展之生物相關指標。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">就讀 BPD 早介診所的青少年（baseline n=239, follow-up n=84）</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">自然觀察（無介入），測量 plasma oxytocin</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">基線 vs. 一年追蹤</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">Baseline oxytocin 顯著負向預測一年後 BPD criteria，逆向方向無顯著效應</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">神經影像學/生物標誌</span><span class="tag">創傷與複雜性PTSD</span><span class="tag">情緒調節</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42914679/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#5</span>
+            <span class="emoji-icon">📝</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>Improved sleep and clinical outcomes following a single-session intervention among adolescents with borderline personality disorder features.</h3>
+          <p class="journal-source">Australian occupational therapy journal &middot; A qualitative description of the daily living functioning of people diagnosed with borderline personality disorder from consumer, carer and clinician perspectives</p>
+          <p>透過消費者、照顧者與臨床醫護視角，描繪 BPD  individual daily living functioning，揭露系統性 barrier 與ケア落差，強調急需綜合評估與個案化服務。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">BPD 診斷個體、其照顧者與臨床醫護</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">質性訪談與視角分析</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">各利益相關者間比較</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">揭露照護系統斷裂、優先權衝突及待評估的功能需求，提供服務改善建議</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">服務使用者經驗</span><span class="tag">污名化與服務</span><span class="tag">共病</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42972857/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#6</span>
+            <span class="emoji-icon">⚠️</span>
+            <span class="utility-low">已列入 rank 2實用性</span>
+          </div>
+          <h3>Association Between Suicidal Ideation and Depressive Symptoms in Patients With Major Depressive, Bipolar, and Borderline Personality Disorder: An Ecological Momentary Assessment Study.</h3>
+          <p class="journal-source">The Journal of clinical psychiatry &middot; Association Between Suicidal Ideation and Depressive Symptoms in Patients With Major Depressive, Bipolar, and Borderline Personality Disorder: An Ecological Momentary Assessment Study.</p>
+          <p>(見 rank 2 之重複條目，此處略過以避免冗餘；實質為同一篇論文之跨期刊登載或相關分析)</p>
+          
+          <div class="card-footer">
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/43055649/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#7</span>
+            <span class="emoji-icon">😴</span>
+            <span class="utility-low">已列入 rank 1實用性</span>
+          </div>
+          <h3>Improved sleep and clinical outcomes following a single-session intervention among adolescents with borderline personality disorder features.</h3>
+          <p class="journal-source">Journal of affective disorders &middot; Improved sleep and clinical outcomes following a single-session intervention among adolescents with borderline personality disorder features.</p>
+          <p>(見 rank 1 之重複條目，略過以維持清單多樣性)</p>
+          
+          <div class="card-footer">
+            
+            <a href="https://pubmed.ncbi.nlm.nih.gov/43057533/" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card featured">
+          <div class="card-header">
+            <span class="rank-badge">#8</span>
+            <span class="emoji-icon">💞</span>
+            <span class="utility-mid">中實用性</span>
+          </div>
+          <h3>Struggling for resonance: Mediopassive interaction in a long-term treatment of severe personality disorder.</h3>
+          <p class="journal-source">Psychotherapy &middot; Struggling for resonance: Mediopassive interaction in a long-term treatment of severe personality disorder.</p>
+          <p>個案研究探討嚴重人格障礙長期心理動力治療中治療聯盟之「共振」變遷，顯示隨治療進程，患者與治療師的協同意味建構能力提升， distress 減少， productivity 增加，提示共識可被訓練與重塑。</p>
+          
+            <div class="pico-grid">
+              <div class="pico-item"><span class="pico-label">P</span><span class="pico-text">符合回避型及 BPD 模式之嚴重人格障礙患者</span></div>
+              <div class="pico-item"><span class="pico-label">I</span><span class="pico-text">長期心理動力治療</span></div>
+              <div class="pico-item"><span class="pico-label">C</span><span class="pico-text">高痛苦 vs. 低痛苦時段比較</span></div>
+              <div class="pico-item"><span class="pico-label">O</span><span class="pico-text">治療中共振水平上升預測 distress 降低、治療產出提升</span></div>
+            </div>
+          <div class="card-footer">
+            <span class="tag">依戀與心智化</span><span class="tag">TFP</span><span class="tag">情緒調節</span>
+            <a href="https://doi.org/https://doi.org/10.1037/pst0000633" target="_blank">閱讀原文 &rarr;</a>
+          </div>
+        </div></div>
+
+  <div class="section"><div class="section-title"><span class="section-icon">📚</span>其他值得關注的文獻</div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧬</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>Assortative mating can mask non-additive genetic contributions to individual differences.</h3>
+          <p class="journal-source">Molecular psychiatry</p>
+          <p>在 9000 家雙胞家族 dataset 中顯示，考慮配偶相關性後，解鎖非加性遺傳貢獻（13-19% 處理變異），使加性遺傳估計值下修 14-39%，補遺 twin 與 molecular 研究間之遺傳性差異。</p>
+          <div class="card-footer">
+            <span class="tag">遺傳學</span><span class="tag">基模治療</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/43058177/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">⚠️</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>Commentary related to 'First do no harm: Client and staff experiences of negative effects from dialectical behaviour therapy'.</h3>
+          <p class="journal-source">Psychology and psychotherapy</p>
+          <p>關於 DBT 負面效應的評論，提醒臨床人員需監測治療過程中的潛在傷害，強調「先不傷害」在 BPD 介入中的重要性。</p>
+          <div class="card-footer">
+            <span class="tag">DBT</span><span class="tag">負面效應</span><span class="tag">服務使用者經驗</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/43062088/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🍽️</span>
+            <span class="utility-mid utility-sm">中</span>
+          </div>
+          <h3>It All Exists Within Me: A Qualitative Study Exploring Mental Health Service Experiences in Adults With Comorbid Eating Disorders and Emotionally Unstable Personality Disorder.</h3>
+          <p class="journal-source">Journal of clinical psychology</p>
+          <p>EUPD (情緒不穩定人格障礙，即 BPD) 與 ED 共病服務使用者描述護理斷裂、被迫優先處理其中之一，強調需全面併存評估與服務適配。</p>
+          <div class="card-footer">
+            <span class="tag">共病</span><span class="tag">服務使用者經驗</span><span class="tag">污名化與服務</span>
+            <a href="https://pubmed.ncbi.nlm.nih.gov/42731115/" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🧠</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>A Transdiagnostic fMRI Dataset With 400 + Deeply Phenotyped Participants Across Resting and Task States.</h3>
+          <p class="journal-source">Scientific Data</p>
+          <p>YaleNeuroConnect 1 fMRI 資料集，410 參與者深度人格特徵，支援跨診斷腦影像研究，提供 BPD 等人格障礙之腦機制探索新樣本。</p>
+          <div class="card-footer">
+            <span class="tag">神經影像學</span><span class="tag">跨診斷</span><span class="tag">研究資源</span>
+            <a href="https://doi.org/https://doi.org/10.1038/s41597-026-08749-0" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">🤖</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>LLM-D12: A Dual-Dimensional Scale of Instrumental and Relational Dependencies on Large Language Models</h3>
+          <p class="journal-source">ACM Transactions on the Web</p>
+          <p>開發 LLM-D12 評估量表，量度個體對 LLM 的工具性與人際依賴，作為數位時代新興依戀模式之量具，雖非傳統 BPD 研究，但涉及依戀模式。</p>
+          <div class="card-footer">
+            <span class="tag">數位心理健康</span><span class="tag">依戀與心智化</span>
+            <a href="https://doi.org/https://doi.org/10.1145/3765895" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">👶</span>
+            <span class="utility-low utility-sm">低</span>
+          </div>
+          <h3>Child emotional competence: a conceptual organizing framework and parent-report measure of emotion reasoning, emotion stability, emotion regulation, and empathy</h3>
+          <p class="journal-source">Frontiers in Child and Adolescent Psychiatry</p>
+          <p>提出情緒能力概念框架與量表（ECIC），針對兒童情緒推理、穩定性、調節與同理心，為未來兒少 BPD 預防與評估提供工具。</p>
+          <div class="card-footer">
+            <span class="tag">情緒調節</span><span class="tag">兒少BPD</span><span class="tag">預防</span>
+            <a href="https://doi.org/https://doi.org/10.3389/frcha.2026.1693241" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div>
+        <div class="news-card">
+          <div class="card-header-row">
+            <span class="emoji-sm">💞</span>
+            <span class="utility-low utility-sm">已列入 top_picks</span>
+          </div>
+          <h3>Struggling for resonance: Mediopassive interaction in a long-term treatment of severe personality disorder.</h3>
+          <p class="journal-source">Psychotherapy</p>
+          <p>(見 top_picks rank 8 之重複條目，此處已歸入 all_papers 避免冗餘)</p>
+          <div class="card-footer">
+            
+            <a href="https://doi.org/https://doi.org/10.1037/pst0000633" target="_blank">PubMed &rarr;</a>
+          </div>
+        </div></div>
+
+  <div class="topic-section section"><div class="section-title"><span class="section-icon">📊</span>主題分佈</div>
+            <div class="topic-row">
+              <span class="topic-name">睡眠</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">3</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">情緒調節</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:100%"></div></div>
+              <span class="topic-count">3</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">家庭與照顧者</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:67%"></div></div>
+              <span class="topic-count">2</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">神經影像學/生物標誌</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">遺傳學</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+              <span class="topic-count">1</span>
+            </div>
+            <div class="topic-row">
+              <span class="topic-name">共病</span>
+              <div class="topic-bar-bg"><div class="topic-bar" style="width:33%"></div></div>
+              <span class="topic-count">1</span>
+            </div></div>
+
+  <div class="keywords-section section"><div class="section-title"><span class="section-icon">🏷️</span>關鍵字</div><div class="keywords"><span class="keyword">BPD</span><span class="keyword">睡眠介入</span><span class="keyword">情緒調節</span><span class="keyword">EMA</span><span class="keyword">家庭照顧者</span><span class="keyword">氧釋素</span><span class="keyword">共病</span></div></div>
+
+  <div class="links-banner">
+    <a href="https://www.leepsyclinic.com/" class="link-card" target="_blank">
+      <span class="link-icon">🏥</span>
+      <span class="link-info">
+        <span class="link-name">李政洋身心診所首頁</span>
+        <span class="link-desc">專業身心科醫療服務</span>
+      </span>
+      <span class="link-arrow">&rarr;</span>
+    </a>
+    <a href="https://blog.leepsyclinic.com/" class="link-card" target="_blank">
+      <span class="link-icon">📬</span>
+      <span class="link-info">
+        <span class="link-name">訂閱電子報</span>
+        <span class="link-desc">定期接收最新身心醫學資訊</span>
+      </span>
+      <span class="link-arrow">&rarr;</span>
+    </a>
+    <a href="https://buymeacoffee.com/CYlee" class="link-card" target="_blank">
+      <span class="link-icon">☕</span>
+      <span class="link-info">
+        <span class="link-name">Buy Me a Coffee</span>
+        <span class="link-desc">支持本研究計畫持續運作</span>
+      </span>
+      <span class="link-arrow">&rarr;</span>
+    </a>
+  </div>
+
+  <footer>
+    <span>資料來源：PubMed &middot; Semantic Scholar &middot; OpenAlex &middot; 分析模型：nvidia/nemotron-3.5-lightning-30b-a3b</span>
+    <span><a href="https://github.com/u8901006/borderline-personality">GitHub</a></span>
+  </footer>
+</div>
+</body>
+</html>
